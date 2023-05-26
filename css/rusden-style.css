@@ -1,0 +1,884 @@
+/*
+
+Tooplate 2119 Gymso Fitness
+
+https://www.tooplate.com/view/2119-gymso-fitness
+
+*/
+
+  :root {
+    --rusden-color:        #f13a11;
+    --white-color:          #ffffff;
+    --dark-color:           #171819;
+    --about-bg-color:       #f9f9f9;
+
+    --gray-color:           #909090;
+    --link-color:           #404040;
+    --p-color:              #666262;
+
+    --font-weight-bold:     bold;
+    --font-weight-normal:   normal;
+    --font-weight-light:    300;
+    --font-weight-thin:     100;
+
+    --h1-font-size:         85px;
+    --h2-font-size:         50px;
+    --h3-font-size:         36px;
+    --h4-font-size:         26px;
+    --h5-font-size:         22px;
+    --h6-font-size:         22px;
+    --p-font-size:          18px;
+    --base-font-size:       16px;
+    --menu-font-size:       14px;
+
+    --border-radius-large:  100%;
+    --border-radius-small:  2px;
+  }
+
+
+  body {
+    background: var(--white-color);
+  }
+
+  .rusden-orange{
+    color: var(--rusden-color);
+  }
+
+  .inline-block{
+    display: inline-block;
+  }
+
+  /*---------------------------------------
+     TYPOGRAPHY              
+  -----------------------------------------*/
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: var(--font-weight-thin);
+    line-height: normal;
+  }
+
+  h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -1px;
+    text-transform: lowercase;
+    margin: 20px 0;
+    font-family: Yeseva One;
+  }
+
+  h2 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -1px;
+    margin: 0;
+    font-family: Yeseva One;
+    text-transform: lowercase;
+  }
+
+  h3 {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -2px;
+    font-family: Montserrat;
+  }
+
+  h4 {
+    font-size: var(--h4-font-size);
+    font-family: Montserrat;
+  }
+
+  h5 {
+    font-size: var(--h5-font-size);
+    font-family: Montserrat;
+  }
+
+  h6 {
+    font-size: var(--h6-font-size);
+    line-height: inherit;
+    margin: 0;
+    font-family: Montserrat;
+    font-weight: var(--font-weight-normal);
+    color: var(--white-color);
+  }
+
+  p {
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
+    line-height: 1.5em;
+    font-family: Montserrat;
+  }
+
+  b, 
+  strong {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0;
+    font-family: Montserrat;
+  }
+
+  .section {
+    padding: 7rem 0;
+  }
+
+  .text-end{
+    text-align: end;
+  }
+
+  .small-icons{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    margin-top: -10px;
+  }
+
+
+  /* BUTTON */
+
+  .custom-btn{
+    background: transparent;
+    border-radius: var(--border-radius-small);
+    padding: 14px 24px;
+    color: var(--white-color);
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-normal);
+    text-transform: uppercase;
+    font-family: Montserrat;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+  }
+
+  .custom-btn:hover {
+    color: var(--rusden-color);
+  }
+
+  .custom-btn:focus {
+    box-shadow: none;
+  }
+
+
+  .custom-btn.bordered:hover,
+  .custom-btn.bordered:focus,
+
+  .custom-btn.bg-color:hover,
+  .custom-btn.bg-color:focus {
+    background: var(--white-color);
+    border-color: transparent;
+    color: var(--rusden-color);
+  }
+
+  .bordered {
+    border: 1px solid var(--rusden-color);
+    color: var(--rusden-color);
+  }
+
+  .bg-color {
+    background: var(--rusden-color);
+    color: var(--white-color);
+  }
+
+  .custom-btn.about-button:hover{
+    background: var(--white-color);
+    border-color: var(--rusden-color);
+    color: var(--rusden-color);
+  }
+
+
+  /*---------------------------------------
+     GENERAL               
+  -----------------------------------------*/
+
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  *::before,
+  *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  a {
+    color: var(--link-color);
+    font-weight: normal;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  a:hover, 
+  a:active, 
+  a:focus {
+    color: var(--rusden-color);
+    outline: none;
+    text-decoration: none;
+  }
+
+
+  /* BG OVERLAY */
+
+  .bg-overlay {
+    background: var(--dark-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+  }
+
+
+  /*---------------------------------------
+     MODAL              
+  -----------------------------------------*/
+
+  .modal-content {
+    padding: 2rem 3rem;
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    border: 0;
+    padding: 0;
+  }
+
+  .membership-form a {
+    color: var(--rusden-color);
+  }
+
+
+  /*---------------------------------------
+    FEATURE          
+  -----------------------------------------*/
+
+  .feature {
+    background: var(--dark-color);
+    padding: 5rem 0;
+  }
+
+
+  /*---------------------------------------
+     MENU             
+  -----------------------------------------*/
+
+  .navbar {
+    background: var(--dark-color);
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    width: 100%;
+  }
+
+  .navbar-brand {
+    color: var(--white-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-bold);
+    line-height: normal;
+    padding-top: 0;
+  }
+
+  .nav-item .nav-link {
+    display: block;
+    color: var(--white-color);
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-normal);
+    text-transform: uppercase;
+    padding: 2px 6px;
+    font-family: Montserrat;
+  }
+
+  .nav-item .nav-link.active,
+  .nav-item .nav-link:hover {
+    color: var(--rusden-color);
+  }
+
+  .navbar .social-icon li a {
+    color: var(--white-color);
+  }
+
+  .navbar-toggler {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    width: 30px;
+    height: 35px;
+    outline: none;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background: transparent;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before,
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
+    transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+    transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+    top: 0;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+  }
+
+  .navbar-toggler .navbar-toggler-icon {
+    background: var(--rusden-color);
+    transition: background 10ms 300ms ease;
+    display: block;
+    width: 30px;
+    height: 2px;
+    position: relative;
+  }
+
+  .navbar-toggler .navbar-toggler-icon::before,
+  .navbar-toggler .navbar-toggler-icon::after {
+    transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
+    transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+    transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: var(--rusden-color);
+    width: 30px;
+    height: 2px;
+    content: '';
+  }
+
+  .navbar-toggler .navbar-toggler-icon::before {
+    top: -8px;
+  }
+
+  .navbar-toggler .navbar-toggler-icon::after {
+    top: 8px;
+  }
+
+  /*---------------------------------------
+     HERO              
+  -----------------------------------------*/
+
+  .hero {
+    background-image: url('../images/slideshow/new-slideshow-1.png');
+    background-position: top;
+    vertical-align: middle;
+    min-height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    
+  }
+  .text-rusden-house{
+    text-shadow: 3px 3px 5px #322f2f;
+    animation: textRevealLeft 3s ease;
+  }
+  
+  @keyframes textRevealLeft{
+    from{
+      margin-left: -300%
+    }
+    to{
+      margin-left: 0;
+    }
+  }
+  
+  .text-student-apartments{
+    text-shadow: 3px 3px 5px #322f2f;
+    animation: textrevealRight 3s ease;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+  }
+  
+  @keyframes textrevealRight{
+    from{
+      margin-right: -300%
+    }
+    to{
+      margin-right: 0;
+    }
+  }
+
+
+ /*---------------------------------------
+      ABOUT & TEAM            
+  -----------------------------------------*/
+
+  .about{
+    background: url("../images/apartment1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .about-content{
+    background: var(--white-color);
+    padding-bottom: 40px;
+  }
+  .about-text{
+    margin: 0;
+  }
+
+  @media(max-width: 767px) {
+    .about-content{
+      padding-top: 30px;
+    }
+  }
+
+  .about-working-hours {
+    border-left: 2px solid;
+    padding-left: 3.5rem;
+  }
+
+  .about-working-hours strong {
+    color: var(--white-color);
+    opacity: 0.85;
+  }
+
+  .team-thumb {
+    position: relative;
+  } 
+
+  /*---------------------------------------
+  ROOM TYPES   (https://webdesign.tutsplus.com/tutorials/horizontal-scrolling-card-ui-flexbox-and-css-grid--cms-41922)         
+-----------------------------------------*/
+.room-types-section {
+  background: var(--white-color);
+  
+}
+
+.room-types-card {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  border-radius: 0px;
+  margin-top: 50px;
+}
+
+.room-name{
+  display: inline-block;
+  bottom: 260px;
+  left: 25px;
+  position: absolute;
+  color: var(--white-color);
+}
+
+.image-container{
+  position: relative;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+  border-radius: 0px;
+  z-index: 10;
+}
+
+.image-container:hover .image-overlay {
+  bottom: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-icons{
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: -10px;
+}
+
+.from-price{
+  font-size: 15px;
+  margin-bottom: -2px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  border-radius: 0px;
+  box-shadow: 1px 1px 15px 5px #dedede;
+
+}
+
+.card-image{
+  height: 320px;
+  width: 100%;
+  object-fit: fill;
+  border-radius: 0px;
+  filter: brightness(55%);
+  text-align: center;
+}
+
+.card .card-content-wrapper {
+  margin-left: 25px;
+  margin-right: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.cards::-webkit-scrollbar {
+  height: 2px;
+}
+
+.cards::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background: var(--dark-color);
+}
+
+.cards::-webkit-scrollbar-track {
+  background: var(--thumb);
+}
+
+@media (min-width: 500px) {
+  .card{
+    flex-basis: calc(80% - 10px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    flex-basis: calc(60% - 20px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .card {
+    flex-basis: calc(40% - 20px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+
+
+  /*---------------------------------------
+     KEY FACILITIES          
+  -----------------------------------------*/
+
+  .key-facilities {
+    background: var(--dark-color);
+  }
+
+  .key-facilities-content{
+    padding-left: 20px;
+  }
+
+  .facilities-item{
+    margin-bottom: 20px;
+    list-style-type: none;
+  }
+
+  .facilities-name{
+    font-weight: 300;
+  }
+
+  .gallery{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2%;
+    max-width: 400px;
+    max-height: 400px;
+  }
+  
+  .gallery-row-1{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2%;
+  }
+
+  .gallery-row-2{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2%;
+  }
+
+  .gallery-row-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+  }
+
+  .gallery-image-small{
+    width: 100%;
+    height: 100%;
+
+    display: inline-block;
+    background-color: plum;
+    object-fit: cover;
+  }
+  .gallery-image-big{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: rgb(117, 117, 218);
+  }
+  .gallery-image-med{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: lightcoral;
+  }
+  
+  .view-more{
+    font-family: Montserrat;
+    font-size: var(--h6-font-size);
+    color: var(--white-color);
+    text-decoration: underline;
+  }
+
+  .gallery{
+    margin-bottom: 35px;
+  }
+  
+
+  /*---------------------------------------
+     CONTACT              
+  -----------------------------------------*/
+
+  .webform input,
+  button#submit-button {
+    height: calc(2.25rem + 20px);
+    font-family: Montserrat;
+  }
+
+  .form-control {
+    border-radius: var(--border-radius-small);
+    margin: 1.3rem 0;
+    font-family: Montserrat;
+  }
+
+  .form-control:focus {
+    box-shadow: none;
+    border-color: var(--dark-color);
+  }
+
+  button#submit-button {
+    background: var(--dark-color);
+    border-color: transparent;
+    color: var(--white-color);
+    font-family: Montserrat;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button#submit-button:hover {
+    background: var(--rusden-color);
+  }
+
+  .contact h2 + p {
+    max-width: 90%;
+  }
+
+  .google-map {
+    border-top: 1px solid #efebeb;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .google-map iframe {
+    width: 100%;
+  }
+
+
+  /*---------------------------------------
+     FOOTER              
+  -----------------------------------------*/
+
+  .site-footer {
+    border-top: 1px solid #efebeb;
+    padding: 3rem 0;
+  }
+
+  .site-footer a {
+    color: var(--p-color);
+    font-weight: var(--font-weight-light);
+  }
+
+  .site-footer p {
+    font-size: var(--base-font-size);
+  }
+
+  .contact .fa,
+  .site-footer .fa {
+    color: var(--rusden-color);
+  }
+
+
+  /*---------------------------------------
+     SOCIAL ICON              
+  -----------------------------------------*/
+
+  .social-icon {
+    position: relative;
+    padding: 0;
+    margin: 5px 0 0 0;
+  }
+
+  .social-icon li {
+    display: inline-block;
+    list-style: none;
+  }
+
+  .social-icon li a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-bold);
+    margin: 5px 10px;
+    text-align: center;
+  }
+
+  .social-icon li a:hover {
+    color: var(--rusden-color);
+  }
+
+
+  /*---------------------------------------
+     RESPONSIVE STYLES              
+  -----------------------------------------*/
+
+  @media screen and (max-width: 992px) {
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .nav-item .nav-link {
+      padding: 6px;
+    }
+
+    .navbar .social-icon {
+      margin-top: 22px;
+    }
+
+    .navbar-collapse,
+    .site-footer {
+      text-align: center;
+    }
+
+    .modal-content {
+      padding: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    h1 {
+      font-size: 65px;
+    }
+
+    .about-working-hours {
+      border-left: 0;
+      padding: 22px 0 0 0;
+    }
+
+    .contact h2 span {
+      display: block;
+    }
+  }
+
+  /*---------------------------------------
+     IMAGES USED:
+
+     ABOUT US:
+     https://images.app.goo.gl/D41XbZ4SK861X9Ft9
+
+     ROOM TYPES:
+     https://images.app.goo.gl/fYNtCs5QnK5UFwMF7
+     https://images.app.goo.gl/bGUuCdi2VNnUC2MGA
+     https://images.app.goo.gl/qqaoKysQLFGykP8z7
+     https://images.app.goo.gl/cTNWswtqnwTfLzJ58
+
+     GALLERY:
+     https://images.app.goo.gl/6pgvpH7fsr9ixLhg6
+     https://images.app.goo.gl/Rx8KEDz8dguHfUCJ8
+     https://images.app.goo.gl/dDqK16PcULhmz5qf9
+     https://images.app.goo.gl/dZ6GZcVsP2SPUjC98
+     https://images.app.goo.gl/sEE8rPajEStpgjk17
+     https://images.app.goo.gl/8q2aFuRBcxyYiX1d6
+
+     SLIDESHOW:
+     https://images.app.goo.gl/WTETvH6eWuBgJwKM8
+     https://images.app.goo.gl/Dax5DqPzgo6cjK9t9
+     https://images.app.goo.gl/Xvafvyu95e2zNZqE7
+     https://images.app.goo.gl/oBfsUG7jFUoG8atn6
+     https://images.app.goo.gl/cTNWswtqnwTfLzJ58
+     https://images.app.goo.gl/D41XbZ4SK861X9Ft9
+
+     ICONS:
+     https://icons8.com/icon/8017/balcony
+     https://icons8.com/icon/69567/meeting-room
+     https://icons8.com/icon/6qMXiF4hK09X/kitchen-room
+     https://icons8.com/icon/vyVBEmzBf2hF/furniture
+     https://icons8.com/icon/2862/lock
+     https://icons8.com/icon/12684/car
+     https://icons8.com/icon/9922/wi-fi
+     https://icons8.com/icon/7Ph75swwSM4k/shower-on
+     https://icons8.com/icon/8021/bed
+     https://icons8.com/icon/9ZFP9c9FVgZx/bathroom
+
+
+     CODES:
+
+     DATE PICKER:
+     https://codepen.io/brnysn/pen/KEKNQa 
+
+     ROOM TYPES:
+     https://webdesign.tutsplus.com/tutorials/horizontal-scrolling-card-ui-flexbox-and-css-grid--cms-41922
+
+     BACKGROUD SLIDESHOW:
+     https://stackoverflow.com/questions/34690104/make-javascript-change-background-image-every-5-seconds
+
+  -----------------------------------------*/
